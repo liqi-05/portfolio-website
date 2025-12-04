@@ -1,13 +1,8 @@
 import { GoogleGenAI } from "@google/genai";
 
-const apiKey = process.env.API_KEY || '';
-const ai = new GoogleGenAI({ apiKey });
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 export const generateCuteIcon = async (prompt: string): Promise<string> => {
-  if (!apiKey) {
-    throw new Error("API Key is missing");
-  }
-
   // We strictly control the style to match the user's request:
   // "cute and simple style", "nano banana", matching the color palette.
   const stylePrompt = `
