@@ -17,7 +17,9 @@ import {
   Terminal, 
   Layout, 
   Users, 
-  Sprout 
+  Sprout,
+  Menu,
+  X
 } from 'lucide-react';
 
 // --- RESUME DATA ---
@@ -110,6 +112,10 @@ const App: React.FC = () => {
   // Use a placeholder that encourages generation or specific resume photo if available
   const [avatar, setAvatar] = useState<string>("https://api.dicebear.com/7.x/notionists/svg?seed=Alex&backgroundColor=FFDCDC");
   const [isGeneratorOpen, setIsGeneratorOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+  const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   return (
     <div className="min-h-screen bg-cute-cream text-cute-text pb-20 font-quicksand">
@@ -120,13 +126,36 @@ const App: React.FC = () => {
           <h1 className="text-2xl font-fredoka font-bold text-cute-dark">
             liqi<span className="text-cute-text">portfolio</span>
           </h1>
+          
+          {/* Desktop Menu */}
           <div className="hidden md:flex gap-8 font-bold text-sm">
             <a href="#about" className="hover:text-cute-dark transition-colors">About</a>
             <a href="#education" className="hover:text-cute-dark transition-colors">Education</a>
             <a href="#skills" className="hover:text-cute-dark transition-colors">Skills</a>
             <a href="#projects" className="hover:text-cute-dark transition-colors">Projects</a>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button 
+            className="md:hidden p-2 text-cute-text hover:bg-cute-pink/20 rounded-lg transition-colors"
+            onClick={toggleMobileMenu}
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
+
+        {/* Mobile Menu Dropdown */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 w-full bg-white border-b-2 border-cute-pink shadow-lg animate-in slide-in-from-top-2">
+            <div className="flex flex-col p-4 space-y-4 font-bold text-center">
+              <a href="#about" onClick={closeMobileMenu} className="p-2 hover:bg-cute-cream rounded-xl transition-colors">About</a>
+              <a href="#education" onClick={closeMobileMenu} className="p-2 hover:bg-cute-cream rounded-xl transition-colors">Education</a>
+              <a href="#skills" onClick={closeMobileMenu} className="p-2 hover:bg-cute-cream rounded-xl transition-colors">Skills</a>
+              <a href="#projects" onClick={closeMobileMenu} className="p-2 hover:bg-cute-cream rounded-xl transition-colors">Projects</a>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero / About Section */}
