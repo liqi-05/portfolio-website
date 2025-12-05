@@ -1,4 +1,4 @@
-/// <reference types="vite/client" />
+// Reference to vite/client removed to fix "Cannot find type definition file" error
 
 interface ImportMetaEnv {
   readonly VITE_API_KEY: string;
