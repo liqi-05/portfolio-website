@@ -7,21 +7,60 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+      .checkered-pattern {
+        background-color: #FFF8F0;
+        background-image: 
+          linear-gradient(45deg, #D6E4F0 25%, transparent 25%, transparent 75%, #D6E4F0 75%, #D6E4F0),
+          linear-gradient(45deg, #D6E4F0 25%, transparent 25%, transparent 75%, #D6E4F0 75%, #D6E4F0);
+        background-position: 0 0, 40px 40px;
+        background-size: 80px 80px;
+      }
+      .wavy-bottom {
+        mask-image: radial-gradient(ellipse 55% 22px at 50% 22px, transparent 50%, black 51%);
+        mask-position: 0px 22px;
+        mask-size: 40px 45px;
+        mask-repeat: repeat-x;
+        -webkit-mask-image: radial-gradient(ellipse 55% 22px at 50% 22px, transparent 50%, black 51%);
+        -webkit-mask-position: 0px 22px;
+        -webkit-mask-size: 40px 45px;
+        -webkit-mask-repeat: repeat-x;
+      }
+      .wavy-top {
+         mask-image: radial-gradient(ellipse 55% 22px at 50% 0px, transparent 50%, black 51%);
+         mask-size: 40px 45px;
+         mask-repeat: repeat-x;
+         -webkit-mask-image: radial-gradient(ellipse 55% 22px at 50% 0px, transparent 50%, black 51%);
+         -webkit-mask-size: 40px 45px;
+         -webkit-mask-repeat: repeat-x;
+      }
+    </style>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              'cute-pink': '#FFDCDC',
-              'cute-cream': '#FFF2EB',
-              'cute-beige': '#FFE8CD',
-              'cute-dark': '#FFD6BA',
-              'cute-text': '#5A4A42',
+              'cute-pink': '#FFDEDE', 
+              'cute-pink-dark': '#FF8FA3',
+              'cute-pink-light': '#FFE4D1',
+              'cute-cream': '#FFF8F0',
+              'cute-blue': '#D6E4F0',
+              'cute-green': '#E2F0CB',
+              'cute-text': '#5D5247',
             },
             fontFamily: {
-              fredoka: ['Fredoka', 'sans-serif'],
+              fraunces: ['"Fraunces"', 'serif'],
               quicksand: ['Quicksand', 'sans-serif'],
+            },
+            animation: {
+              'float': 'float 3s ease-in-out infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              }
             }
           }
         }
@@ -41,7 +80,7 @@
 }
 </script>
 </head>
-  <body class="bg-cute-cream text-cute-text font-quicksand selection:bg-cute-dark selection:text-white">
+  <body class="bg-cute-cream text-cute-text font-quicksand selection:bg-cute-pink selection:text-white">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>
