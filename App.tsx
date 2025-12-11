@@ -209,7 +209,7 @@ const App: React.FC = () => {
             </div>
             {/* Cute floating bubble */}
             <div className="absolute -bottom-2 -right-2 bg-white px-5 py-3 rounded-xl shadow-lg border-2 border-cute-pink transform rotate-3">
-               <span className="font-fraunces text-cute-text text-base font-bold">Hi there! 👋</span>
+               <span className="font-fraunces text-cute-text text-base font-bold">Hi there!</span>
             </div>
           </div>
 
@@ -431,7 +431,7 @@ const App: React.FC = () => {
                    <Sprout size={40} />
                 </div>
             </div>
-            <h2 className="text-4xl font-fraunces font-bold mb-10">Ready to create something magic?</h2>
+            <h2 className="text-4xl font-fraunces font-bold mb-10">Ready to create something magical?</h2>
             
             <div className="flex justify-center gap-8 mb-12">
                 <a href="mailto:leeliqi1117@gmail.com" className="hover:text-cute-pink-dark transition-colors"><Mail size={32}/></a>
