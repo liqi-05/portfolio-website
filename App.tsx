@@ -218,10 +218,19 @@ const App: React.FC = () => {
              <span className="text-cute-pink-dark italic">with heart</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-cute-text/80 max-w-3xl mx-auto leading-relaxed font-bold mb-10 bg-white/60 backdrop-blur-sm p-6 rounded-3xl shadow-sm border border-white">
-            Computer Science Student. Internship Seeker.<br/>
-            <span className="text-cute-pink-dark font-black">Jan - Apr 2026</span>
-          </p>
+          {/* Enhanced Intro Section */}
+          <div className="max-w-3xl mx-auto mb-10 space-y-6">
+            <p className="text-xl md:text-2xl text-cute-text/90 font-bold bg-white/60 backdrop-blur-sm p-6 rounded-3xl shadow-sm border border-white">
+              Computer Science Student. Internship Seeker.<br/>
+              <span className="text-cute-pink-dark font-black">Jan - Apr 2026</span>
+            </p>
+            
+            <p className="text-lg text-cute-text/80 leading-relaxed font-medium px-4">
+              I am a passionate developer from Malaysia with a knack for building user-friendly applications. 
+              My journey involves mastering everything from low-level C programming to modern web technologies.
+              I'm constantly learning and ready to bring creative ideas to life!
+            </p>
+          </div>
           
           <div className="flex flex-wrap justify-center gap-5 text-base font-bold">
             <a href="mailto:leeliqi1117@gmail.com" className="flex items-center gap-2 px-8 py-4 bg-white rounded-2xl shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)] hover:translate-y-1 hover:shadow-none transition-all border-2 border-cute-text hover:border-cute-pink">
