@@ -1,2 +1,2 @@
 // This file manages your static image assets.
-export const profileImage = "assets/profile.jpg";
+export const profileImage = "public/profile.jpg";
