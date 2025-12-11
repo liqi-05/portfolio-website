@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ProjectCard } from './components/ProjectCard';
 import { Project, SkillCategory, EducationItem, ExperienceItem, CertificateItem } from './types';
+import { profileImage } from './assets/images';
 import { 
   Github, 
   Mail, 
@@ -26,10 +27,11 @@ import {
 const PROJECTS: Project[] = [
   {
     id: '1',
-    title: 'Library Management System',
-    description: 'Created a book borrowing and inventory system using C and file handling. Managed book records with structured data storage.',
-    tags: ['C', 'File Handling', 'Data Structures'],
-    repoUrl: 'https://github.com/liqi-05/liqi-05'
+    title: 'ResumePop (Hybrid AI Optimizer)',
+    description: 'Developed a serverless resume analyzer using React and TypeScript. Engineered a client-side keyword matching algorithm using Set Theory (DSA) for instant O(1) scoring, reducing AI API latency by 90%.',
+    tags: ['React', 'TypeScript', 'DSA', 'AI Engineering', 'Tailwind CSS'],
+    repoUrl: 'https://github.com/liqi-05/resume',
+    demoUrl: 'https://resume-beta-ten-46.vercel.app/'
   },
   {
     id: '2',
@@ -37,7 +39,14 @@ const PROJECTS: Project[] = [
     description: 'Developed an automated PO system using Java and Swing. Handled purchase requests and file-based data storage.',
     tags: ['Java', 'Swing', 'Automation'],
     repoUrl: 'https://github.com/liqi-05/liqi-05'
-  }
+  },
+  {
+    id: '3',
+    title: 'Library Management System',
+    description: 'Created a book borrowing and inventory system using C and file handling. Managed book records with structured data storage.',
+    tags: ['C', 'File Handling', 'Data Structures'],
+    repoUrl: 'https://github.com/liqi-05/liqi-05'
+  },
 ];
 
 const SKILL_CATEGORIES: SkillCategory[] = [
@@ -196,7 +205,7 @@ const App: React.FC = () => {
             <div className="absolute inset-0 bg-white rounded-full scale-105 border-4 border-cute-pink border-dashed animate-spin-slow"></div>
             <div className="relative w-64 h-64 bg-white rounded-full overflow-hidden border-4 border-cute-text shadow-xl">
                <img 
-                 src="/profile.jpg"
+                 src={profileImage}
                  alt="Portrait of Li Qi" 
                  className="w-full h-full object-cover"
                />

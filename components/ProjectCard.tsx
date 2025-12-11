@@ -48,7 +48,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                 rel="noopener noreferrer"
                 className="flex-1 py-2.5 rounded-xl bg-cute-pink-light text-cute-text font-bold text-center hover:bg-cute-dark hover:text-white hover:scale-105 transition-all text-xs flex items-center justify-center gap-2 shadow-sm"
             >
-                <ExternalLink className="w-3.5 h-3.5" /> Demo
+                <ExternalLink className="w-3.5 h-3.5" /> Visit Website
             </a>
         )}
       </div>
