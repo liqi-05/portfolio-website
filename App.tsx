@@ -43,24 +43,24 @@ const PROJECTS: Project[] = [
 
 const SKILL_CATEGORIES: SkillCategory[] = [
   {
-    title: 'Languages',
+    title: 'Frontend & Languages',
     icon: <Terminal className="w-6 h-6 text-white" />,
-    skills: ['Python', 'C/C++', 'C#', 'Java', 'HTML', 'CSS', 'JavaScript']
+    skills: ['React', 'TypeScript', 'JavaScript', 'HTML5/CSS3', 'Tailwind', 'Python', 'Java', 'C/C++']
   },
   {
-    title: 'Analytics',
+    title: 'Backend & Data',
     icon: <Database className="w-6 h-6 text-white" />,
-    skills: ['PostgreSQL', 'R']
+    skills: ['Node.js', 'C# / .NET', 'PostgreSQL', 'MySQL', 'MongoDB', 'R', 'REST APIs']
   },
   {
-    title: 'Tools',
+    title: 'Tools & DevOps',
     icon: <Code2 className="w-6 h-6 text-white" />,
-    skills: ['ASP.NET', 'SAP ERP', 'Git/GitHub', 'VS Code', 'Linux']
+    skills: ['Git & GitHub', 'Docker', 'Linux', 'VS Code', 'Postman', 'Figma', 'SAP ERP']
   },
   {
-    title: 'Soft Skills',
+    title: 'Professional Skills',
     icon: <Users className="w-6 h-6 text-white" />,
-    skills: ['Agile', 'Teamwork', 'Adaptability', 'Communication']
+    skills: ['Agile / Scrum', 'Problem Solving', 'Team Leadership', 'Communication', 'Adaptability']
   }
 ];
 
@@ -77,12 +77,6 @@ const EDUCATION: EducationItem[] = [
     period: '2023 - 2024',
     details: ['CGPA: 3.74']
   },
-  {
-    institution: 'Chong Hwa Independent High School',
-    degree: 'SPM',
-    period: '2018 - 2023',
-    details: ['SPM: 9A']
-  }
 ];
 
 const EXPERIENCE: ExperienceItem[] = [
@@ -97,6 +91,7 @@ const EXPERIENCE: ExperienceItem[] = [
 ];
 
 const CERTIFICATES: CertificateItem[] = [
+  { title: 'AWS Academy Graduate - Cloud Foundations' },
   { title: 'Vice Chancellor\'s List 2024-2025' },
   { title: 'Red Hat System Admin I (RH124)' },
   { title: 'Red Hat System Admin II (RH134)' }
@@ -221,8 +216,8 @@ const App: React.FC = () => {
           {/* Enhanced Intro Section */}
           <div className="max-w-3xl mx-auto mb-10 space-y-6">
             <p className="text-xl md:text-2xl text-cute-text/90 font-bold bg-white/60 backdrop-blur-sm p-6 rounded-3xl shadow-sm border border-white">
-              Computer Science Student. Internship Seeker.<br/>
-              <span className="text-cute-pink-dark font-black">Jan - Apr 2026</span>
+              Computer Science Student.<br/>
+              <span className="text-cute-pink-dark font-black">Lee Li Qi</span>
             </p>
             
             <p className="text-lg text-cute-text/80 leading-relaxed font-medium px-4">
@@ -302,7 +297,7 @@ const App: React.FC = () => {
                  {/* Experience Column */}
                  <div className="bg-cute-cream rounded-[3rem] p-8 border-2 border-white shadow-inner">
                     <h3 className="font-fraunces text-2xl font-bold mb-8 text-cute-text flex items-center gap-3">
-                        <Sparkles className="w-6 h-6 text-cute-pink-dark"/> Work
+                        <Sparkles className="w-6 h-6 text-cute-pink-dark"/> Experience
                     </h3>
                     <div className="space-y-8">
                         {EXPERIENCE.map((exp, i) => (
