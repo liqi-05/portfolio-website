@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { ProjectCard } from './components/ProjectCard';
 import { Project, SkillCategory, EducationItem, ExperienceItem, CertificateItem } from './types';
-import { profileImage } from './assets/images';
 import { 
   Github, 
   Mail, 
@@ -197,7 +196,7 @@ const App: React.FC = () => {
             <div className="absolute inset-0 bg-white rounded-full scale-105 border-4 border-cute-pink border-dashed animate-spin-slow"></div>
             <div className="relative w-64 h-64 bg-white rounded-full overflow-hidden border-4 border-cute-text shadow-xl">
                <img 
-                 src={profileImage}
+                 src="/profile.jpg"
                  alt="Portrait of Li Qi" 
                  className="w-full h-full object-cover"
                />
