@@ -34,17 +34,25 @@ const PROJECTS: Project[] = [
   },
   {
     id: '2',
-    title: 'Purchase Order System',
-    description: 'Developed an automated PO system using Java and Swing. Handled purchase requests and file-based data storage.',
-    tags: ['Java', 'Swing', 'Automation'],
-    repoUrl: 'https://github.com/liqi-05/liqi-05'
+    title: 'HabitFlow (AI Wellness Engine)',
+    description: 'Built a zero-backend personal data science platform using React 19. Engineered client-side ML algorithms (Linear Regression) for real-time burnout prediction and integrated Gemini 2.5 for voice-to-JSON data logging.',
+    tags: ['React 19', 'TypeScript', 'Gemini AI', 'Client-Side ML', 'Tailwind CSS'],
+    repoUrl: 'https://github.com/liqi-05/habit-tracker',
+    demoUrl: 'https://habit-tracker-gamma-two.vercel.app/'
   },
   {
     id: '3',
+    title: 'Purchase Order System',
+    description: 'Developed an automated PO system using Java and Swing. Handled purchase requests and file-based data storage.',
+    tags: ['Java', 'Swing', 'Automation'],
+    repoUrl: 'https://github.com/liqi-05'
+  },
+  {
+    id: '4',
     title: 'Library Management System',
     description: 'Created a book borrowing and inventory system using C and file handling. Managed book records with structured data storage.',
     tags: ['C', 'File Handling', 'Data Structures'],
-    repoUrl: 'https://github.com/liqi-05/liqi-05'
+    repoUrl: 'https://github.com/liqi-05'
   },
 ];
 
@@ -238,7 +246,7 @@ const App: React.FC = () => {
             <a href="mailto:leeliqi1117@gmail.com" className="flex items-center gap-2 px-8 py-4 bg-white rounded-2xl shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)] hover:translate-y-1 hover:shadow-none transition-all border-2 border-cute-text hover:border-cute-pink">
                 <Mail className="w-6 h-6 text-cute-pink-dark" /> Contact Me
             </a>
-            <a href="https://github.com/liqi-05/liqi-05" target="_blank" rel="noreferrer" className="flex items-center gap-2 px-8 py-4 bg-cute-text text-white rounded-2xl shadow-[4px_4px_0px_0px_rgba(255,222,222,1)] hover:translate-y-1 hover:shadow-none transition-all border-2 border-cute-text">
+            <a href="https://github.com/liqi-05" target="_blank" rel="noreferrer" className="flex items-center gap-2 px-8 py-4 bg-cute-text text-white rounded-2xl shadow-[4px_4px_0px_0px_rgba(255,222,222,1)] hover:translate-y-1 hover:shadow-none transition-all border-2 border-cute-text">
                 <Github className="w-6 h-6" /> GitHub
             </a>
           </div>
@@ -399,7 +407,7 @@ const App: React.FC = () => {
             <div className="text-center mb-20 relative">
                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-24 bg-cute-pink-light rotate-3 rounded-full -z-10 blur-xl opacity-50"></div>
                  <h2 className="text-4xl md:text-5xl font-fraunces font-bold text-cute-text">
-                    Recent Projects
+                    My Projects
                  </h2>
                  <p className="mt-6 font-bold text-cute-text/60 text-xl">Take a peek at what I've built!</p>
             </div>
@@ -420,7 +428,7 @@ const App: React.FC = () => {
                 ))}
 
                  <a 
-                    href="https://github.com/liqi-05/liqi-05" 
+                    href="https://github.com/liqi-05" 
                     target="_blank" 
                     rel="noreferrer"
                     className="group bg-cute-pink-light/30 rounded-[3rem] border-4 border-dashed border-cute-text/20 p-8 flex flex-col items-center justify-center text-cute-text hover:bg-cute-pink-light transition-all min-h-[300px]"
@@ -446,8 +454,8 @@ const App: React.FC = () => {
             
             <div className="flex justify-center gap-8 mb-12">
                 <a href="mailto:leeliqi1117@gmail.com" className="hover:text-cute-pink-dark transition-colors"><Mail size={32}/></a>
-                <a href="https://linkedin.com/in/lee-li-qi" className="hover:text-cute-pink-dark transition-colors"><Linkedin size={32}/></a>
-                <a href="https://github.com/liqi-05/liqi-05" className="hover:text-cute-pink-dark transition-colors"><Github size={32}/></a>
+                <a href="https://www.linkedin.com/in/lee-li-qi-ab1203288/" className="hover:text-cute-pink-dark transition-colors"><Linkedin size={32}/></a>
+                <a href="https://github.com/liqi-05" className="hover:text-cute-pink-dark transition-colors"><Github size={32}/></a>
             </div>
 
             <p className="font-quicksand font-bold opacity-60 text-base">
