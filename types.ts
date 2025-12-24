@@ -33,6 +33,7 @@ export interface ExperienceItem {
 export interface CertificateItem {
   title: string;
   issuer?: string;
+  fileUrl?: string;
 }
 
 export interface SocialLink {

@@ -1,72 +1,94 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth scroll-pt-24">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lee Li Qi - Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-    <style>
-      .checkered-pattern {
-        background-color: #FFF8F0;
-        background-image: 
-          linear-gradient(45deg, #D6E4F0 25%, transparent 25%, transparent 75%, #D6E4F0 75%, #D6E4F0),
-          linear-gradient(45deg, #D6E4F0 25%, transparent 25%, transparent 75%, #D6E4F0 75%, #D6E4F0);
-        background-position: 0 0, 40px 40px;
-        background-size: 80px 80px;
-      }
-      .wavy-bottom {
-        mask-image: radial-gradient(ellipse 55% 22px at 50% 22px, transparent 50%, black 51%);
-        mask-position: 0px 22px;
-        mask-size: 40px 45px;
-        mask-repeat: repeat-x;
-        -webkit-mask-image: radial-gradient(ellipse 55% 22px at 50% 22px, transparent 50%, black 51%);
-        -webkit-mask-position: 0px 22px;
-        -webkit-mask-size: 40px 45px;
-        -webkit-mask-repeat: repeat-x;
-      }
-      .wavy-top {
-         mask-image: radial-gradient(ellipse 55% 22px at 50% 0px, transparent 50%, black 51%);
-         mask-size: 40px 45px;
-         mask-repeat: repeat-x;
-         -webkit-mask-image: radial-gradient(ellipse 55% 22px at 50% 0px, transparent 50%, black 51%);
-         -webkit-mask-size: 40px 45px;
-         -webkit-mask-repeat: repeat-x;
-      }
-    </style>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              'cute-pink': '#FFDEDE', 
-              'cute-pink-dark': '#FF8FA3',
-              'cute-pink-light': '#FFE4D1',
-              'cute-cream': '#FFF8F0',
-              'cute-blue': '#D6E4F0',
-              'cute-green': '#E2F0CB',
-              'cute-text': '#5D5247',
-            },
-            fontFamily: {
-              fraunces: ['"Fraunces"', 'serif'],
-              quicksand: ['Quicksand', 'sans-serif'],
-            },
-            animation: {
-              'float': 'float 3s ease-in-out infinite',
-            },
-            keyframes: {
-              float: {
-                '0%, 100%': { transform: 'translateY(0)' },
-                '50%': { transform: 'translateY(-10px)' },
-              }
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lee Li Qi - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=Quicksand:wght@300..700&display=swap"
+    rel="stylesheet">
+  <style>
+    .checkered-pattern {
+      background-color: #FFF8F0;
+      background-image:
+        linear-gradient(45deg, #D6E4F0 25%, transparent 25%, transparent 75%, #D6E4F0 75%, #D6E4F0),
+        linear-gradient(45deg, #D6E4F0 25%, transparent 25%, transparent 75%, #D6E4F0 75%, #D6E4F0);
+      background-position: 0 0, 40px 40px;
+      background-size: 80px 80px;
+    }
+
+    .dark .checkered-pattern {
+      background-color: #131524;
+      background-image:
+        linear-gradient(45deg, #1E2235 25%, transparent 25%, transparent 75%, #1E2235 75%, #1E2235),
+        linear-gradient(45deg, #1E2235 25%, transparent 25%, transparent 75%, #1E2235 75%, #1E2235);
+    }
+
+    .wavy-bottom {
+      mask-image: radial-gradient(ellipse 55% 22px at 50% 22px, transparent 50%, black 51%);
+      mask-position: 0px 22px;
+      mask-size: 40px 45px;
+      mask-repeat: repeat-x;
+      -webkit-mask-image: radial-gradient(ellipse 55% 22px at 50% 22px, transparent 50%, black 51%);
+      -webkit-mask-position: 0px 22px;
+      -webkit-mask-size: 40px 45px;
+      -webkit-mask-repeat: repeat-x;
+    }
+
+    .wavy-top {
+      mask-image: radial-gradient(ellipse 55% 22px at 50% 0px, transparent 50%, black 51%);
+      mask-size: 40px 45px;
+      mask-repeat: repeat-x;
+      -webkit-mask-image: radial-gradient(ellipse 55% 22px at 50% 0px, transparent 50%, black 51%);
+      -webkit-mask-size: 40px 45px;
+      -webkit-mask-repeat: repeat-x;
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'cute-pink': '#FFDEDE',
+            'cute-pink-dark': '#FF8FA3',
+            'cute-pink-light': '#FFE4D1',
+            'cute-cream': '#FFF8F0',
+            'cute-blue': '#D6E4F0',
+            'cute-green': '#E2F0CB',
+            'cute-text': '#5D5247',
+
+            // Dark Mode Colors (inspired by Fincheck)
+            'cute-dark-bg': '#131524',      // Deep Navy Background
+            'cute-dark-card': '#1E2235',    // Lighter Navy for cards
+            'cute-dark-text': '#FFFFFF',    // White text
+            'cute-dark-muted': '#94A3B8',   // Slate for secondary text
+            'cute-dark-border': '#2D324A',  // Border color
+            'cute-dark-accent': '#FF8FA3',  // Keep pink accent? Or maybe a glowy blue/cyan? Let's use pink for brand consistency but maybe a neon variant if needed.
+          },
+          fontFamily: {
+            fraunces: ['"Fraunces"', 'serif'],
+            quicksand: ['Quicksand', 'sans-serif'],
+          },
+          animation: {
+            'float': 'float 3s ease-in-out infinite',
+            'spin-slow': 'spin 8s linear infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
             }
           }
         }
       }
-    </script>
-<script type="importmap">
+    }
+  </script>
+  <script type="importmap">
 {
   "imports": {
     "react/": "https://esm.sh/react@^19.2.1/",
@@ -80,8 +102,10 @@
 }
 </script>
 </head>
-  <body class="bg-cute-cream text-cute-text font-quicksand selection:bg-cute-pink selection:text-white">
-    <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
-  </body>
+
+<body class="bg-cute-cream text-cute-text font-quicksand selection:bg-cute-pink selection:text-white">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+
 </html>
