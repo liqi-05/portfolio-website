@@ -153,10 +153,10 @@ const App: React.FC = () => {
           </button>
 
           <div className="hidden md:flex gap-10 font-bold text-base">
-            {['About', 'Education', 'Skills', 'Projects'].map((item) => (
+            {['About', 'Education', 'Credentials', 'Skills', 'Projects'].map((item) => (
               <button
                 key={item}
-                onClick={() => scrollToSection(item.toLowerCase())}
+                onClick={() => scrollToSection(item === 'Credentials' ? 'experience' : item.toLowerCase())}
                 className="hover:text-cute-pink-dark transition-colors relative group font-fraunces text-lg"
               >
                 {item}
@@ -182,10 +182,10 @@ const App: React.FC = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-md border-b-2 border-cute-pink shadow-lg dark:bg-cute-dark-bg/95 dark:border-cute-dark-border">
             <div className="flex flex-col p-4 space-y-2 font-bold text-center">
-              {['About', 'Education', 'Skills', 'Projects'].map((item) => (
+              {['About', 'Education', 'Credentials', 'Skills', 'Projects'].map((item) => (
                 <button
                   key={item}
-                  onClick={() => scrollToSection(item.toLowerCase())}
+                  onClick={() => scrollToSection(item === 'Credentials' ? 'experience' : item.toLowerCase())}
                   className="p-4 hover:bg-cute-cream rounded-xl transition-colors text-cute-text w-full font-fraunces text-lg dark:text-cute-dark-text dark:hover:bg-cute-dark-card"
                 >
                   {item}
